@@ -164,6 +164,8 @@ def display_instances(image, boxes, masks, class_ids, class_names,
             ax.add_patch(p)
     ax.imshow(masked_image.astype(np.uint8))
     if auto_show:
+        plt.savefig("./test_results/%3s.jpg"%(str(count[4:7])))  # use this line to save the showing result to file
+                                                                 #  while annotating the next line to inhibit the plt.show to halt the process 
         plt.show()
 
 
